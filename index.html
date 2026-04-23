@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Adam</title>
+    <style>
+        /* Fondo Rosa Pastel */
+        body {
+            background-color: #ffe4e1; 
+            color: #d87093;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; 
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 10;
+            max-width: 85%;
+            position: relative;
+        }
+
+        /* Globos Pastel Flotantes */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-130vh) rotate(30deg); opacity: 0; }
+        }
+
+        /* Botón Interactivo */
+        button {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        /* Mensaje Secreto */
+        #mensaje-secreto {
+            display: none; 
+            margin-top: 25px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #db7093;
+            animation: fadeIn 1.5s;
+            text-align: left; /* Para que la carta se lea mejor */
+            white-space: pre-wrap; /* Mantiene los espacios y saltos de línea */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="balloon" style="left: 5%; background: #ffc0cb; animation-delay: 0s;"></div>
+    <div class="balloon" style="left: 25%; background: #e6e6fa; animation-delay: 3s;"></div>
+    <div class="balloon" style="left: 45%; background: #fff0f5; animation-delay: 6s;"></div>
+    <div class="balloon" style="left: 65%; background: #f0fff0; animation-delay: 2s;"></div>
+    <div class="balloon" style="left: 85%; background: #ffe4e1; animation-delay: 5s;"></div>
+
+    <div class="container">
+        <h1>¡feliz cumple mi nene precioso! 🤍</h1>
+        
+        <p>Tengo una sorpresa para vos...</p>
+        
+        <button onclick="mostrarMensaje()">¡Toca acá!</button>
+
+        <div id="mensaje-secreto">mi nene precioso,hoy es un dia muy especial! es tu cumpleaños mi nene.. y bueno como es una fecha especial decidi hacerte esta pequeña pero llena de amor carta.
+
+que decirte mi amor,pues que muchas gracias por estar conmigo y tambien gracias por seguir aca en la vida,seguir existiendo y viviendo por que eso es muy muy especial para mi ya que no me imagino un mundo sin vos mi nene precioso.
+
+sos un chico lindisimo y tambien un amor y por eso decidi hacerte esta carta,espero y te guste mi amor por que la verdad le estoy poniendo todo mi amor y tiempo para que quede perfecta para vos,por que te lo mereces,mereces todo y mucho mas.
+
+gracias por elegirme todos los dias y estar para mi siempre,te amo con todo mi corazon! muak muak feliz cumpleaños mi precioso.!</div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            var x = document.getElementById("mensaje-secreto");
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
